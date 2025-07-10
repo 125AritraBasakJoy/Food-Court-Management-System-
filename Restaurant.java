@@ -47,19 +47,14 @@ public class Restaurant implements FoodItemOperations {
 		return flag;
 
 	}
-	public FoodItem searchFoodItem(String fid){
-		FoodItem f = null;
-
-		for(int i=0 ; i<fooditems.length;i++){
-			if(fooditems!=null){
-				if(fooditems[i].getFid().equals(fid)){
-					f=fooditems[i];
-					break;
-				}
-			}
-		}
-		return f;
-	}
+	public FoodItem searchFoodItem(String fid) {
+    for (int i = 0; i < fooditems.length; i++) {
+        if (fooditems[i] != null && fooditems[i].getFid().equals(fid)) {
+            return fooditems[i];
+        }
+    }
+    return null;
+}
 	public void showAllFoodItems(){
 		for(int i=0; i<fooditems.length; i++){
 			if(fooditems[i] != null){
